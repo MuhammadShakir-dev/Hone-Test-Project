@@ -74,24 +74,6 @@ body {
   animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-@keyframes bar-in {
-  from {
-    transform: scaleY(0);
-    opacity: 0.35;
-  }
-  to {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
-
-.bar-in {
-  transform-origin: bottom;
-  transform: scaleY(0);
-  animation: bar-in 0.95s cubic-bezier(0.16, 1, 0.3, 1) both;
-  will-change: transform, opacity;
-}
-
 .bar-morph {
   transition:
     top 0.9s cubic-bezier(0.16, 1, 0.3, 1),

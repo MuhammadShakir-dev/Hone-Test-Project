@@ -40,18 +40,19 @@ Open http://localhost:3000.
 
 ```
 app/
-  api/live-scores/route.ts   # dummy in-memory API with artificial latency
-  page.tsx                   # dashboard composition
+  page.tsx                   # dashboard layout (left + right columns)
   layout.tsx / globals.css   # fonts, theme tokens, animations
-components/
-  DashboardShell.tsx         # sidebar + header + mobile drawer (client)
-  Sidebar.tsx                # nav + upgrade card
-  NextMatchCard.tsx          # "Your Next Match"
-  StatisticYearCard.tsx      # yearly bar chart (current year ± 3)
-  GlobalStatisticCard.tsx    # donut chart
-  RankingCards.tsx           # Singles / Doubles / Mixed Doubles
-  ProfileCard.tsx            # player bio with wavy purple header
-  LiveScoresCard.tsx         # animated card fed by the dummy API (client)
-  icons.tsx                  # hand-drawn SVG icons matching the design
-public/assets/               # illustrations & icons exported from the design
+  api/live-scores/route.ts   # GET live scores (dummy data + 900ms delay)
+  api/statistics/route.ts    # GET year stats (dummy data + 280ms delay)
+lib/
+  types.ts                   # shared domain types
+  api.ts                     # client fetch helpers
+  delay.ts                   # artificial API latency
+  donut.ts                   # donut chart colors + geometry
+  data/                      # in-memory dummy datasets
+hooks/
+  useLiveScores.ts
+  useYearStatistics.ts
+components/                  # one file per UI piece (shell, cards, icons)
+public/assets/               # illustrations & icons from the design
 ```
