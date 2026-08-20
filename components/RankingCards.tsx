@@ -1,9 +1,37 @@
+import Image from "next/image";
 import { DownIcon, UpIcon } from "./icons";
 
 const CARDS = [
-  { label: "Singles", value: 18, dir: "up" as const, bg: "#F44772" },
-  { label: "Doubles", value: 20, dir: "up" as const, bg: "#FF9A3E" },
-  { label: "Mixed Doubles", value: 16, dir: "down" as const, bg: "#332A7D" },
+  {
+    label: "Singles",
+    value: 18,
+    dir: "up" as const,
+    bg: "#F44772",
+    art: "/assets/rank-singles.png",
+    artW: 378,
+    artH: 530,
+    artClass: "pointer-events-none absolute -right-10 -top-10 h-[190px] w-auto max-w-none select-none",
+  },
+  {
+    label: "Doubles",
+    value: 20,
+    dir: "up" as const,
+    bg: "#FF9A3E",
+    art: "/assets/rank-doubles.png",
+    artW: 366,
+    artH: 527,
+    artClass: "pointer-events-none absolute -right-10 -top-10 h-[190px] w-auto max-w-none select-none",
+  },
+  {
+    label: "Mixed Doubles",
+    value: 16,
+    dir: "down" as const,
+    bg: "#332A7D",
+    art: "/assets/rank-mixed.png",
+    artW: 425,
+    artH: 426,
+    artClass: "pointer-events-none absolute -right-8 -top-7 h-[150px] w-auto max-w-none select-none",
+  },
 ];
 
 export default function RankingCards() {
@@ -12,13 +40,16 @@ export default function RankingCards() {
       {CARDS.map((card) => (
         <div
           key={card.label}
-          className="relative h-[100px] overflow-hidden rounded-card shadow-card"
+          className="relative h-[100px] overflow-hidden rounded-[20px] shadow-card"
           style={{ backgroundColor: card.bg }}
         >
-          {/* decorative circles */}
-          <span className="absolute -top-[50px] right-[-15px] h-[130px] w-[130px] rounded-full bg-white/[0.22]" />
-          <span className="absolute -bottom-[60px] right-[-25px] h-[130px] w-[130px] rounded-full bg-white/[0.20]" />
-          <span className="absolute -bottom-[35px] left-[45px] h-[110px] w-[110px] rounded-full border border-white/30" />
+          <Image
+            src={card.art}
+            alt=""
+            width={card.artW}
+            height={card.artH}
+            className={card.artClass}
+          />
 
           <div className="relative px-[15px] pt-5">
             <p className="text-[12px] font-medium leading-[18px] text-white">

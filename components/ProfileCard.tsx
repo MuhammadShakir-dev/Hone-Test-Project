@@ -49,7 +49,7 @@ export default function ProfileCard() {
           />
         </div>
 
-        <div className="mt-[17px] space-y-[10px] px-6 text-[12px] leading-[16px] text-night">
+        <div className="mt-[17px] space-y-[10px] px-6 text-[12px] font-medium leading-[16px] text-night">
           <p>Age : 27</p>
           <p>Birth : 24 - 02 - 1993</p>
           <p>Sex : Women</p>

@@ -15,7 +15,7 @@ export default function Home() {
         <div className="min-w-0">
           <NextMatchCard />
 
-          <h2 className="mt-[25px] text-[16px] font-semibold leading-6 text-ink">
+          <h2 className="mt-[25px] text-[20px] font-semibold leading-[30px] text-ink">
             Statistic
           </h2>
           <div className="mt-[27px] grid grid-cols-1 gap-5 md:grid-cols-[minmax(0,30fr)_minmax(0,33fr)]">
@@ -23,7 +23,7 @@ export default function Home() {
             <GlobalStatisticCard />
           </div>
 
-          <h2 className="mt-[25px] text-[16px] font-semibold leading-6 text-ink">
+          <h2 className="mt-[25px] text-[20px] font-semibold leading-[30px] text-ink">
             Rankings
           </h2>
           <div className="mt-[21px]">

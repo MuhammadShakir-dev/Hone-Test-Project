@@ -96,7 +96,7 @@ export default function GlobalStatisticCard() {
 
   return (
     <section className="relative flex h-[300px] flex-col items-center rounded-card bg-white pt-[25px] shadow-card">
-      <h2 className="text-[16px] font-semibold leading-6 text-ink">
+      <h2 className="text-[20px] font-medium leading-[30px] text-ink">
         Global Statistic
       </h2>
 

@@ -105,8 +105,8 @@ export async function GET(request: NextRequest) {
   const year = Number.isFinite(requested) ? requested : CURRENT_YEAR;
   const key = String(year);
 
-  /* artificial latency so the loading animation is visible */
-  await sleep(700);
+  /* short beat so the morph/grow reads, without a stuck pause */
+  await sleep(280);
 
   const stats = DATA[key] ?? DATA[String(CURRENT_YEAR)];
   return NextResponse.json({

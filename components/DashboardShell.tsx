@@ -14,10 +14,10 @@ export default function DashboardShell({
   const [activeMenu, setActiveMenu] = useState("score");
 
   return (
-    <div className="min-h-screen overflow-x-clip bg-page">
-      <div className="flex min-h-screen">
+    <div className="h-screen overflow-hidden bg-page">
+      <div className="flex h-full">
         {/* Static sidebar (desktop) */}
-        <aside className="hidden shrink-0 xl:block">
+        <aside className="hidden h-full shrink-0 xl:block">
           <Sidebar active={activeMenu} onSelect={setActiveMenu} />
         </aside>
 
@@ -42,9 +42,9 @@ export default function DashboardShell({
         )}
 
         {/* Main */}
-        <div className="min-w-0 flex-1 px-4 pb-[25px] sm:px-6 xl:pl-[30px] xl:pr-10">
+        <div className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-4 pb-[25px] sm:px-6 xl:pl-[30px] xl:pr-10">
           {/* Header */}
-          <header className="flex items-center justify-between pt-4 xl:pt-[26px]">
+          <header className="flex items-center justify-between pt-8 xl:pt-[48px]">
             <div className="flex items-center gap-4 xl:gap-5">
               <button
                 aria-label="Open menu"

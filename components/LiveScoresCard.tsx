@@ -43,7 +43,7 @@ export default function LiveScoresCard() {
   return (
     <section className="h-[220px] rounded-card bg-white p-5 shadow-card">
       <div className="flex items-center justify-between">
-        <h2 className="text-[16px] font-semibold leading-6 text-ink">
+        <h2 className="text-[20px] font-semibold leading-[30px] text-ink">
           Latest Scores
         </h2>
         <a

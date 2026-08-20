@@ -30,7 +30,7 @@ export default function Sidebar({
   onSelect: (id: string) => void;
 }) {
   return (
-    <div className="flex h-full min-h-screen w-[300px] flex-col bg-panel">
+    <div className="flex h-full min-h-full w-[300px] flex-col overflow-hidden bg-panel">
       {/* Logo */}
       <div className="px-10 pt-10">
         <Image
@@ -43,7 +43,7 @@ export default function Sidebar({
       </div>
 
       {/* Menu */}
-      <nav className="mt-[58px] flex flex-col gap-[45px] pl-10">
+      <nav className="mt-8 flex min-h-0 flex-1 flex-col justify-center gap-7 pl-10 xl:mt-[58px] xl:justify-start xl:gap-[45px]">
         {MENU.map((item) => {
           const isActive = item.id === active;
           return (
@@ -100,7 +100,7 @@ export default function Sidebar({
       </nav>
 
       {/* Upgrade card */}
-      <div className="mx-[25px] mb-[25px] mt-auto pt-[60px]">
+      <div className="mx-[25px] mb-4 mt-auto shrink-0 pt-10 xl:mb-[25px] xl:pt-[60px]">
         <div className="group relative rounded-card bg-[#ECEEFE]">
           <Image
             src="/assets/upgrade-lock.png"
