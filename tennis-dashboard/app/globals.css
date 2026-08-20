@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* palette sampled from the Figma file */
+  --color-page: #f4f5f7;
+  --color-panel: #fdfdfd;
+  --color-ink: #30325b; /* section headings / card titles */
+  --color-night: #16162a; /* names, big numbers, dark body text */
+  --color-blue: #1757ff;
+  --color-menu: #9b9b9b;
+  --color-faint: #aeb4d6; /* periwinkle: dates, months, inactive tabs */
+  --color-live: #f5222d;
+  --color-teal: #35d6bf;
+  --color-teal-soft: #ddf9f4;
+  --color-gold: #f3b944;
+  --color-gold-soft: #fef3d9;
+  --color-social: #aeb2cc;
+
+  --shadow-card: 0 15px 40px 0 rgba(190, 196, 224, 0.18);
+
+  --radius-card: 15px;
+}
+
+html,
+body {
+  background: var(--color-page);
+  color: var(--color-night);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- loading / entrance animations ---------- */
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    100deg,
+    #eef0f8 30%,
+    #f9faff 50%,
+    #eef0f8 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+  border-radius: 6px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  animation: fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes bar-in {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.bar-in {
+  transform-origin: bottom;
+  animation: bar-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes donut-grow {
+  from {
+    stroke-dasharray: 0 100;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+}
+
+.donut-seg {
+  animation: donut-grow 1.1s cubic-bezier(0.4, 0, 0.2, 1) both;
+  transition: opacity 0.28s ease, filter 0.28s ease;
+}
+
+@keyframes drawer-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawer-in {
+  animation: drawer-in 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
