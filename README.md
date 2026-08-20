@@ -1,6 +1,6 @@
 # Tennis — Live Scores Dashboard
 
-Pixel-perfect Next.js implementation of the [Pavago Tennis dashboard Figma design](https://www.figma.com/design/FsEFFbE2W3v2nFfSWh0FXg/Pavago?node-id=11709-3239), fully responsive across all screen sizes.
+Pixel-perfect Next.js implementation of the [Tennis dashboard Figma design](https://www.figma.com/design/d7s9PsFoX1KyJD0VzT9jlj/Dashboard-Tennis--Community-?node-id=1-4&p=f&t=lwLANx9mhigA58O2-0), fully responsive across all screen sizes.
 
 ## Tech stack
 
