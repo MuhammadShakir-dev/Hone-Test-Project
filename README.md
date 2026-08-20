@@ -6,7 +6,7 @@ Pixel-perfect Next.js implementation of the [Tennis dashboard Figma design](http
 
 - **Next.js 16** (App Router, TypeScript, Turbopack)
 - **Tailwind CSS v4** with design tokens sampled from the Figma file
-- **Poppins** via `@fontsource/poppins` (no runtime font fetching)
+- **SF Pro Display** via the system font stack (`-apple-system` / BlinkMacSystemFont on Apple devices)
 
 ## Features
 
